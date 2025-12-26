@@ -1,0 +1,43 @@
+{
+  "item.immersivenavigation.barometer": "Barometer",
+  "item.immersivenavigation.sextant": "Sextant",
+
+  "item.immersivenavigation.barometer.at_sea_level": "You are at sea level",
+  "item.immersivenavigation.barometer.below_sea_level": "You are %d meters below sea level",
+  "item.immersivenavigation.barometer.above_sea_level": "You are %d meters above sea level",
+  "item.immersivenavigation.barometer.not_working": "The barometer isn't working",
+
+  "gui.immersivenavigation.barometer.at_sea_level": "At sea level",
+  "gui.immersivenavigation.barometer.below_sea_level": "%d meters below sea level",
+  "gui.immersivenavigation.barometer.above_sea_level": "%d meters above sea level",
+  "gui.immersivenavigation.barometer.not_working": "The barometer isn't working",
+
+  "item.immersivenavigation.sextant.no_sky": "You cannot see the sky!",
+  "item.immersivenavigation.sextant.unfamiliar_sky": "This sky is unfamiliar, you cannot locate yourself.",
+  "item.immersivenavigation.sextant.coordinates": "Your coordinates are %d°%d %d°%d",
+
+  "gui.immersivenavigation.sextant.coordinates": "%d°%d %d°%d",
+
+  "tooltip.immersivenavigation.compass_north": "§8Always points north",
+
+  "text.autoconfig.immersivenavigation.title": "Immersive Navigation Configuration",
+
+  "text.autoconfig.immersivenavigation.category.categoryname": "Immersive Navigation Configuration",
+
+  "text.autoconfig.immersivenavigation.option.netherDepth": "Nether Depth (m)",
+  "text.autoconfig.immersivenavigation.option.netherDepth.@Tooltip": "How far below the overworld the nether is (in meters), as displayed by the barometer.",
+  "text.autoconfig.immersivenavigation.option.barometerOverlay": "Barometer HUD Overlay",
+  "text.autoconfig.immersivenavigation.option.barometerOverlay.@Tooltip": "Shows your elevation on the HUD when you have a barometer in your inventory, doesn't affect the barometer's right click behaviour.",
+  "text.autoconfig.immersivenavigation.option.sextantOverlay": "Sextant HUD Overlay",
+  "text.autoconfig.immersivenavigation.option.sextantOverlay.@Tooltip": "Shows your latitude and longitude on the HUD when you have a sextant in your inventory, doesn't affect the sextant's right click behaviour.",
+  "text.autoconfig.immersivenavigation.option.sextantBlocksPerDegree": "Sextant Blocks Per Degree",
+  "text.autoconfig.immersivenavigation.option.sextantBlocksPerDegree.@Tooltip": "How many blocks one sextant degree represents.",
+  "text.autoconfig.immersivenavigation.option.sextantDecimalPlaces": "Sextant Decimal Places",
+  "text.autoconfig.immersivenavigation.option.sextantDecimalPlaces.@Tooltip": "How many decimals the sextant rounds to.",
+  "text.autoconfig.immersivenavigation.option.compassPointsNorth": "Compass Points North",
+  "text.autoconfig.immersivenavigation.option.compassPointsNorth.@Tooltip": "Makes the vanilla compass point north instead of towards the world spawn.",
+  "text.autoconfig.immersivenavigation.option.showCompassHintTooltip": "Show Compass Hint Tooltip",
+  "text.autoconfig.immersivenavigation.option.showCompassHintTooltip.@Tooltip": "Shows a hint tooltip on the vanilla compass about it pointing north. This option does nothing if the compass pointing north is disabled.",
+  "text.autoconfig.immersivenavigation.option.noSurvivalDebug": "No Survival Debug",
+  "text.autoconfig.immersivenavigation.option.noSurvivalDebug.@Tooltip": "Disables most information in the F3 debug menu in survival mode."
+}

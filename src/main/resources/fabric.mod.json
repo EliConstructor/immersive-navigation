@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "immersivenavigation",
+	"version": "${version}",
+	"name": "Immersive Navigation",
+	"description": "Replaces coordinates with in-game navigation tools.",
+	"authors": [
+		"EliConstructor"
+	],
+	"contact": {
+	},
+	"license": "ARR",
+	"icon": "assets/immersive-navigation/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.eliq.immersivenavigation.ImmersiveNavigation"
+		],
+		"client": [
+			"me.eliq.immersivenavigation.ImmersiveNavigationClient"
+		],
+		"modmenu": [
+			"me.eliq.immersivenavigation.config.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"immersivenavigation.mixins.json",
+		{
+			"config": "immersivenavigation.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cloth-config": "15.0.140"
+	},
+	"suggests": {
+	}
+}
