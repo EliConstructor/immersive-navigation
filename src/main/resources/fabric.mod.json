@@ -10,7 +10,7 @@
 	"contact": {
 	},
 	"license": "ARR",
-	"icon": "assets/immersive-navigation/icon.png",
+	"icon": "assets/immersivenavigation/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -31,11 +31,11 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.1",
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.11",
 		"java": ">=21",
 		"fabric-api": "*",
-		"cloth-config": "15.0.140"
+		"cloth-config": ">=21.11.153"
 	},
 	"suggests": {
 	}

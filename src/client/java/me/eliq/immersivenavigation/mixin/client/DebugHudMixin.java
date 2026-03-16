@@ -18,20 +18,19 @@ import java.util.List;
 
 @Mixin(DebugHud.class)
 public class DebugHudMixin {
-    @Shadow
-    @Final
-    private MinecraftClient client;
+	@Shadow
+	@Final
+	private MinecraftClient client;
 
-    @Shadow
-    private void drawText(DrawContext context, List<String> text, boolean left) {/*dummy body*/}
+	@Inject(method = "drawText", at = @At("HEAD"))
+	private void drawLeftText(DrawContext context, List<String> text, boolean left, CallbackInfo ci) {
+		if (!left) return;
+		if (!this.client.getDebugHud().shouldShowDebugHud()) return;
 
-    @Inject(method = "drawLeftText", at = @At("HEAD"), cancellable = true)
-    protected void drawLeftText(DrawContext context, CallbackInfo ci){
-        if (client.hasReducedDebugInfo() && ImmersiveNavigation.config.noSurvivalDebug){
-            List<String> list = Lists.newArrayList("Minecraft " + SharedConstants.getGameVersion().getName() + " (" + this.client.getGameVersion() + "/" + ClientBrandRetriever.getClientModName() + ")", this.client.fpsDebugString);
-            list.add("Immersive Navigation's no survival debug is enabled!");
-            drawText(context, list, true);
-            ci.cancel();
-        }
-    }
+		if (client.hasReducedDebugInfo() && ImmersiveNavigation.config.noSurvivalDebug) {
+			text.clear();
+			text.add("Minecraft " + SharedConstants.getGameVersion().name() + " (" + this.client.getGameVersion() + "/" + ClientBrandRetriever.getClientModName() + ")");
+			text.add("Immersive Navigation's no survival debug is enabled!");
+		}
+	}
 }
