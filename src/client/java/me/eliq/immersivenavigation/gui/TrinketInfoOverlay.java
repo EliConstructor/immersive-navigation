@@ -4,6 +4,7 @@ import me.eliq.immersivenavigation.ImmersiveNavigation;
 import me.eliq.immersivenavigation.registry.ModItems;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.entity.player.PlayerEntity;
@@ -42,9 +43,9 @@ public class TrinketInfoOverlay implements HudRenderCallback {
     private void drawSextantInfo(DrawContext drawContext, MinecraftClient client, PlayerEntity player){
         if (!ImmersiveNavigation.config.sextantOverlay)
             return;
-        if (player.getWorld().getRegistryKey() != World.OVERWORLD)
+        if (player.getEntityWorld().getRegistryKey() != World.OVERWORLD)
             return;
-        if (!player.getWorld().isSkyVisible(player.getBlockPos()))
+        if (!player.getEntityWorld().isSkyVisible(player.getBlockPos()))
             return;
 
         float latitude = (float) player.getBlockZ() / ImmersiveNavigation.config.sextantBlocksPerDegree;
@@ -62,7 +63,7 @@ public class TrinketInfoOverlay implements HudRenderCallback {
         if (longitude > 0)
             lonLetter = "E";
 
-        drawContext.drawGuiTexture(SEXTANT_ICON, 2, 2 + ROW_HEIGHT * rowNum, 16, 16);
+		drawContext.drawGuiTexture(RenderPipelines.GUI_TEXTURED, SEXTANT_ICON, 2, 2 + ROW_HEIGHT * rowNum, 16, 16);
         drawContext.drawText(client.textRenderer,
                 Text.translatable("gui.immersivenavigation.sextant.coordinates", Math.abs(latitude), latLetter, Math.abs(longitude), lonLetter),
                 20, 5 + ROW_HEIGHT * rowNum, Colors.WHITE, true);
@@ -73,13 +74,13 @@ public class TrinketInfoOverlay implements HudRenderCallback {
         if (!ImmersiveNavigation.config.barometerOverlay)
             return;
 
-        if (!(player.getWorld().getRegistryKey() == World.OVERWORLD || player.getWorld().getRegistryKey() == World.NETHER))
+        if (!(player.getEntityWorld().getRegistryKey() == World.OVERWORLD || player.getEntityWorld().getRegistryKey() == World.NETHER))
             return;
 
-        int difference = player.getBlockY() - player.getWorld().getSeaLevel();
+        int difference = player.getBlockY() - player.getEntityWorld().getSeaLevel();
         Text message = Text.of("");
 
-        if (player.getWorld().getRegistryKey() == World.NETHER){
+        if (player.getEntityWorld().getRegistryKey() == World.NETHER){
             difference -= ImmersiveNavigation.config.netherDepth;
         }
 
@@ -91,7 +92,7 @@ public class TrinketInfoOverlay implements HudRenderCallback {
             message = Text.translatable("gui.immersivenavigation.barometer.below_sea_level", -difference);
         }
 
-        drawContext.drawGuiTexture(BAROMETER_ICON, 2, 2 + ROW_HEIGHT * rowNum, 16, 16);
+		drawContext.drawGuiTexture(RenderPipelines.GUI_TEXTURED, BAROMETER_ICON, 2, 2 + ROW_HEIGHT * rowNum, 16, 16);
         drawContext.drawText(client.textRenderer, message, 20, 5 + ROW_HEIGHT * rowNum, Colors.WHITE, true);
         rowNum++;
     }
