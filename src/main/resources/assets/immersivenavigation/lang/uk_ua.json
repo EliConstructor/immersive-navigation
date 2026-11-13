@@ -1,0 +1,43 @@
+{
+  "item.immersivenavigation.barometer": "Барометр",
+  "item.immersivenavigation.sextant": "Секстант",
+
+  "item.immersivenavigation.barometer.at_sea_level": "Ви на рівні моря",
+  "item.immersivenavigation.barometer.below_sea_level": "Ви на %d метрів нижче рівня моря",
+  "item.immersivenavigation.barometer.above_sea_level": "Ви на %d метрів вище рівня моря",
+  "item.immersivenavigation.barometer.not_working": "Барометр не працює",
+
+  "gui.immersivenavigation.barometer.at_sea_level": "На рівні моря",
+  "gui.immersivenavigation.barometer.below_sea_level": "%d метрів нижче рівня моря",
+  "gui.immersivenavigation.barometer.above_sea_level": "%d метрів вище рівня моря",
+  "gui.immersivenavigation.barometer.not_working": "Барометр не працює",
+
+  "item.immersivenavigation.sextant.no_sky": "Ви не бачите небо!",
+  "item.immersivenavigation.sextant.unfamiliar_sky": "Це небо невідоме для вас, ви не здатні визначити де ви.",
+  "item.immersivenavigation.sextant.coordinates": "Ваші координати: %d°%d %d°%d",
+
+  "gui.immersivenavigation.sextant.coordinates": "%d°%d %d°%d",
+
+  "tooltip.immersivenavigation.compass_north": "§8Завжди вказує на північ",
+
+  "text.autoconfig.immersivenavigation.title": "Конфігурації Immersive Navigation",
+
+  "text.autoconfig.immersivenavigation.category.categoryname": "Конфігурації Immersive Navigation",
+
+  "text.autoconfig.immersivenavigation.option.netherDepth": "Глибина Незеру (м)",
+  "text.autoconfig.immersivenavigation.option.netherDepth.@Tooltip": "Як низько Незер під Верхнім світом (в метрах), показується на барометрі.",
+  "text.autoconfig.immersivenavigation.option.barometerOverlay": "Барометр в HUD",
+  "text.autoconfig.immersivenavigation.option.barometerOverlay.@Tooltip": "Показує ваш рівень висоти в HUD, коли барометр у вашому інвентарі. Не впливає на підказки викликані ПКМ.",
+  "text.autoconfig.immersivenavigation.option.sextantOverlay": "Секстант в HUD",
+  "text.autoconfig.immersivenavigation.option.sextantOverlay.@Tooltip": "Показує вашу довготу та широту в HUD, коли секстант у вашому інвентарі. Не впливає на підказки викликані ПКМ.",
+  "text.autoconfig.immersivenavigation.option.sextantBlocksPerDegree": "Блоків на градус",
+  "text.autoconfig.immersivenavigation.option.sextantBlocksPerDegree.@Tooltip": "Скільки блоків в одному градусі секстанту.",
+  "text.autoconfig.immersivenavigation.option.sextantDecimalPlaces": "Цифри після коми",
+  "text.autoconfig.immersivenavigation.option.sextantDecimalPlaces.@Tooltip": "До скільки цифр після коми округлюється секстант.",
+  "text.autoconfig.immersivenavigation.option.compassPointsNorth": "Компас вказує на північ",
+  "text.autoconfig.immersivenavigation.option.compassPointsNorth.@Tooltip": "Розвертає стрілку ванільного компасу на північ, замість спавну.",
+  "text.autoconfig.immersivenavigation.option.showCompassHintTooltip": "Підказка для компасу",
+  "text.autoconfig.immersivenavigation.option.showCompassHintTooltip.@Tooltip": "Дає підсказку при наведені на компас, що він вказує на північ. Немає ефекту, якщо компас ванільний.",
+  "text.autoconfig.immersivenavigation.option.noSurvivalDebug": "Вимкнення екрану налагодження",
+  "text.autoconfig.immersivenavigation.option.noSurvivalDebug.@Tooltip": "Вимикає більшість інформації в екрані налагодження (F3) в режимі виживання."
+}
